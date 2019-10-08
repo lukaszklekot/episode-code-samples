@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6F39FB234D4A3900DBDB00 /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6F39FA234D4A3900DBDB00 /* Overture */; };
 		CAD67E2023329887000C7787 /* WolframAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29217322FB231F006090DF /* WolframAlpha.swift */; };
 		DC90717022FA102900B38B42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90716F22FA102900B38B42 /* AppDelegate.swift */; };
 		DC90717222FA102900B38B42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90717122FA102900B38B42 /* SceneDelegate.swift */; };
@@ -249,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6F39FB234D4A3900DBDB00 /* Overture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +546,9 @@
 			dependencies = (
 			);
 			name = ComposableArchitecture;
+			packageProductDependencies = (
+				8E6F39FA234D4A3900DBDB00 /* Overture */,
+			);
 			productName = ComposableArchitecture;
 			productReference = DCF0C59B2326032B008B45A0 /* ComposableArchitecture.framework */;
 			productType = "com.apple.product-type.framework";
@@ -742,6 +747,9 @@
 				Base,
 			);
 			mainGroup = DC90716322FA102900B38B42;
+			packageReferences = (
+				8E6F39F9234D4A3900DBDB00 /* XCRemoteSwiftPackageReference "swift-overture" */,
+			);
 			productRefGroup = DC90716D22FA102900B38B42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1692,6 +1700,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E6F39F9234D4A3900DBDB00 /* XCRemoteSwiftPackageReference "swift-overture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-overture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E6F39FA234D4A3900DBDB00 /* Overture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6F39F9234D4A3900DBDB00 /* XCRemoteSwiftPackageReference "swift-overture" */;
+			productName = Overture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC90716422FA102900B38B42 /* Project object */;
 }

@@ -27,10 +27,10 @@ public func primeModalReducer(state: inout PrimeModalState, action: PrimeModalAc
   }
 }
 
-public struct IsPrimeModalView: View {
-  @ObservedObject var store: Store<PrimeModalState, PrimeModalAction>
+public struct IsPrimeModalView<AppState, AppAction>: View {
+  @ObservedObject var store: Store<AppState, AppAction>.Substore<PrimeModalState, PrimeModalAction>
 
-  public init(store: Store<PrimeModalState, PrimeModalAction>) {
+  public init(store: Store<AppState, AppAction>.Substore<PrimeModalState, PrimeModalAction>) {
     self.store = store
   }
 
