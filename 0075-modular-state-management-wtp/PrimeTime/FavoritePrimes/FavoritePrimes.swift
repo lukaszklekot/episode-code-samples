@@ -14,10 +14,10 @@ public func favoritePrimesReducer(state: inout [Int], action: FavoritePrimesActi
   }
 }
 
-public struct FavoritePrimesView<AppState, AppAction>: View {
-  @ObservedObject var store: Store<AppState, AppAction>.Substore<[Int], FavoritePrimesAction>
+public struct FavoritePrimesView: View {
+  @ObservedObject var store: Substore<[Int], FavoritePrimesAction>
 
-  public init(store: Store<AppState, AppAction>.Substore<[Int], FavoritePrimesAction>) {
+  public init(store: Substore<[Int], FavoritePrimesAction>) {
     self.store = store
   }
 

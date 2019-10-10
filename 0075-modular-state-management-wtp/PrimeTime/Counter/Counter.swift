@@ -57,13 +57,13 @@ public enum CounterViewAction {
 
 }
 
-public struct CounterView<AppState, AppAction>: View {
-  @ObservedObject var store: Store<AppState, AppAction>.Substore<CounterViewState, CounterViewAction>
+public struct CounterView: View {
+  @ObservedObject var store: Substore<CounterViewState, CounterViewAction>
   @State var isPrimeModalShown = false
   @State var alertNthPrime: PrimeAlert?
   @State var isNthPrimeButtonDisabled = false
 
-  public init(store: Store<AppState, AppAction>.Substore<CounterViewState, CounterViewAction>) {
+  public init(store: Substore<CounterViewState, CounterViewAction>) {
     self.store = store
   }
 
